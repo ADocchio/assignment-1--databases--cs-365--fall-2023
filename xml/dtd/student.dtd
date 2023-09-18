@@ -1,16 +1,14 @@
-<!-- xml/dtd/student.dtd -->
-        <!-- Root element students must contain one ore more students -->
+<!-- Root element students must contain one ore more students -->
         <!ELEMENT students (student+)>
 
         <!-- Student element must have this structure -->
-        <!ELEMENT student (firstName, middleName, lastName, preferredName, studentID, email, phone, statusYear, GPA, major, minor, statusType, advisor, dateOfEnrollment, graduationDate)>
+        <!ELEMENT student (firstName, middleName, lastName, preferredName,email, phone, statusYear, GPA, major, minor, statusType, advisor, dateOfEnrollment, graduationDate)>
 
         <!-- Elements of student -->
         <!ELEMENT firstName (#PCDATA)>          <!-- First name of the student -->
         <!ELEMENT middleName (#PCDATA)>         <!-- Middle name of the student -->
         <!ELEMENT lastName (#PCDATA)>           <!-- Last name of the student -->
         <!ELEMENT preferredName (#PCDATA)>      <!-- Name student wishes to be called -->
-        <!ELEMENT studentID (#PCDATA)>          <!-- ID of the student -->
         <!ELEMENT email (#PCDATA)>              <!-- Email of the student -->
         <!ELEMENT phone (#PCDATA)>              <!-- Phone number of the student -->
         <!ELEMENT statusYear (#PCDATA)>         <!-- Current year of the student -->
@@ -22,4 +20,5 @@
         <!ELEMENT dateOfEnrollment (#PCDATA)>   <!-- Enrollment date of student -->
         <!ELEMENT graduationDate (#PCDATA)>     <!-- Graduation date of student -->
 
-
+        <!ATTLIST student
+                studentID (#PCDATA)> #REQUIRED  <!-- ID of the student -->
